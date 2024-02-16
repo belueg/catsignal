@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Video Showcase</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+      }
+
+      .video-container {
+        width: 80%;
+        max-width: 700px;
+        max-height: 90vh;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .video-container:hover {
+        transform: scale(1.03);
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+
+      video:loadeddata + .video-container::before {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <video id="catVideo" controls>
+        <source src="cat-signal.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var catVideo = document.getElementById('catVideo')
+        // Add any JavaScript you need for video controls or interactions here
+      })
+    </script>
+  </body>
+</html>
