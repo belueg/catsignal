@@ -5,8 +5,10 @@
         "Effect":"Allow",
       "Principal": "*",
       "Action":["s3:GetObject"],
-      "Resource":["arn:aws:s3:::catsignal/*"
+      "Resource":["arn:aws:s3:::catsignal.click/*"
       ]
     }
   ]
 }
+
+//aws s3api put-bucket-policy --bucket catsignal.click --policy file://infra/s3-public-policy.json

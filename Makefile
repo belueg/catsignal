@@ -1,5 +1,5 @@
 
-BUCKET_NAME=catsignal
+BUCKET_NAME=catsignal.click
 REGION=us-east-1
 
 deploy:
